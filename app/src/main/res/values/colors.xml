@@ -12,4 +12,6 @@
     <color name="color3">#C0FDFB</color>
     <color name="color4">#DAFFEF</color>
     <color name="color5">#FCFFFD</color>
+    <color name="colorFuenteBotones">#0B1F44</color>
+    <color name="colorBotones">#21BCC6</color>
 </resources>

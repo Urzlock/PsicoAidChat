@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registroPsicologo">
+
+    <!--En el siguiente codigo esta la plantilla
+    base para poder hacer todos los campos de
+    textos. Para esto se creo un estilo llamado
+    et_style que permite crear un rectangulo con
+    bordes redondeados. Si se desea usar, tambien se
+    tiene que copiar y pegar el Material Components
+    para darle un mejor estilo
+   -->
+
+    <EditText
+        android:id="@+id/textNombre"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:hint="Nombre"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.148" />
+
+    <EditText
+
+        android:id="@+id/textApellidos"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:hint="Apellidos"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNombre"
+        app:layout_constraintVertical_bias="0.063" />
+
+    <EditText
+
+        android:id="@+id/textEdad"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:inputType="number"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:hint="Edad"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textApellidos"
+        app:layout_constraintVertical_bias="0.069" />
+
+
+    <EditText
+
+        android:id="@+id/textSexo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:hint="Sexo"
+        android:inputType="textPersonName"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textEdad"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <EditText
+
+        android:id="@+id/textNombreUser"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:hint="Nombre de Usuario"
+        android:inputType="textPersonName"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSexo"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <EditText
+
+        android:id="@+id/textTelefono"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:hint="Teléfono"
+        android:inputType="number"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNombreUser"
+        app:layout_constraintVertical_bias="0.086" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
