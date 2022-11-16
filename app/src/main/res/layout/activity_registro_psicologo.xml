@@ -143,4 +143,58 @@
         app:layout_constraintTop_toBottomOf="@+id/textNombreUser"
         app:layout_constraintVertical_bias="0.086" />
 
+    <EditText
+
+        android:id="@+id/textCorreo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTelefono"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <EditText
+
+        android:id="@+id/textPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="number"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCorreo"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <Button
+        android:id="@+id/btnRegisterPsic"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/colorBotones"
+        android:textColor="@color/colorFuenteBotones"
+        android:layout_height="wrap_content"
+        android:text="Registrar"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
