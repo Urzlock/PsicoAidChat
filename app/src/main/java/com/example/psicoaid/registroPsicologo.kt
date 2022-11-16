@@ -48,9 +48,7 @@ class registroPsicologo : AppCompatActivity() {
         var correo:String
         var password:String
 
-//INICIO DE CLASE QUE DETERMINA EL MINIMO Y MAXIMO DE DE EDAD
 
-//FIN DE LA CLASE QUUE DETERMINA EL MINIMO Y MAXIMO DE EDAD
         btnRegisterPsic.setOnClickListener {
            if(textNombre.text.isNotEmpty() && textApellidos.text.isNotEmpty() && textEdad.text.isNotEmpty() && textNombreUser.text.isNotEmpty() && textTelefono.text.isNotEmpty() && textCorreo.text.isNotEmpty()  && textPassword.text.isNotEmpty()){
                 nombre=textNombre.text.toString()
@@ -62,6 +60,12 @@ class registroPsicologo : AppCompatActivity() {
                telefono=textTelefono.text.toString()
                correo=textCorreo.text.toString()
                password=textPassword.text.toString()
+               if(validarPassword(password)==true){
+                    Toast.makeText(this,"Contraseña valida",Toast.LENGTH_LONG).show()
+               }
+               else{
+                   Toast.makeText(this,"Contraseña invalida,Ingrese 1 Numero, 1 Mayuscula y Minuscula, 1 Caracter Especial y sin espacios en 6 o mas caracteres",Toast.LENGTH_LONG).show()
+               }
                Toast.makeText(this,"${sexo}, ${especialidad}",Toast.LENGTH_LONG).show()
             }
             else{
@@ -70,8 +74,12 @@ class registroPsicologo : AppCompatActivity() {
         }
 
     }
-    /* Validación de Edad---> Utilizar Expresiones regulares
-    fun validarEdad(text: String?):Boolean{
-        val p = Pattern.compile()
-    }*/
+    // Validación de Contraseña--> Por lo menos 1 Digito,1 minuscula, 1 mayuscula, 1 caracter especial y no espacios con una longitud de 6 minimo
+    fun validarPassword(text: String?):Boolean{
+        val expReg:String="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$"
+        val p = Pattern.compile(expReg)
+        val match= p.matcher(text)
+
+        return match.matches()
+    }
 }

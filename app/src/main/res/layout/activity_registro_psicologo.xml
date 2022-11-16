@@ -204,7 +204,7 @@
         android:background="@drawable/et_style"
         android:ems="10"
         android:hint="Contraseña"
-        android:inputType="number"
+        android:inputType="text"
         android:paddingLeft="25sp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
