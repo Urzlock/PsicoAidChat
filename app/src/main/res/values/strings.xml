@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">PsicoAid</string>
+
+    <string-array name="sexo">
+        <item>Sexo</item>
+        <item>Hombre</item>
+        <item>Mujer</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="especialidades">
+        <item>Especialidades</item>
+        <item>Psicología Infantil y de Adolescencia</item>
+        <item>Psicología Clínica</item>
+        <item>Psicología Cognitiva Conductual</item>
+        <item>Psicología Educativa</item>
+
+    </string-array>
 </resources>

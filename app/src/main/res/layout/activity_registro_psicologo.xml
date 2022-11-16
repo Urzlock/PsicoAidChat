@@ -5,6 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".registroPsicologo">
+    <TextView
+        android:id="@+id/txtEjemplo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo"
+        app:layout_constraintBottom_toTopOf="@+id/textNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--En el siguiente codigo esta la plantilla
     base para poder hacer todos los campos de
@@ -79,16 +88,15 @@
         app:layout_constraintVertical_bias="0.069" />
 
 
-    <EditText
+    <Spinner
 
         android:id="@+id/textSexo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30sp"
         android:layout_marginHorizontal="75dp"
         android:background="@drawable/et_style"
         android:ems="10"
-        android:hint="Sexo"
         android:inputType="textPersonName"
         android:paddingLeft="25sp"
         android:paddingTop="5dp"
@@ -99,6 +107,28 @@
         app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textEdad"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <Spinner
+        android:id="@+id/textEspecialidad"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:autofillHints="Especialidades"
+        android:layout_height="30sp"
+        android:layout_marginHorizontal="75dp"
+        android:background="@drawable/et_style"
+        android:ems="10"
+
+        android:inputType="textPersonName"
+        android:paddingLeft="25sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/color2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.586"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSexo"
         app:layout_constraintVertical_bias="0.065" />
 
     <EditText
@@ -119,7 +149,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSexo"
+        app:layout_constraintTop_toBottomOf="@+id/textEspecialidad"
         app:layout_constraintVertical_bias="0.081" />
 
     <EditText
@@ -197,4 +227,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textPassword" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
