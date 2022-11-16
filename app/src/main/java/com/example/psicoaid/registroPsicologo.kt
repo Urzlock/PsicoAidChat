@@ -76,10 +76,11 @@ class registroPsicologo : AppCompatActivity() {
     }
     // Validación de Contraseña--> Por lo menos 1 Digito,1 minuscula, 1 mayuscula, 1 caracter especial y no espacios con una longitud de 6 minimo
     fun validarPassword(text: String?):Boolean{
-        val expReg:String="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#\$%^&+=])(?=\\\\S+\$).{4,}\$"
-        val p = Pattern.compile(expReg)
-        val match= p.matcher(text)
+        text?.let {
+            val passwordPattern = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{4,}$"
+            val passwordMatcher = Regex(passwordPattern)
 
-        return match.matches()
+            return passwordMatcher.find(text) != null
+        } ?: return false
     }
 }
