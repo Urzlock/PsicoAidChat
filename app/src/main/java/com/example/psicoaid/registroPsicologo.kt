@@ -79,7 +79,7 @@ class registroPsicologo : AppCompatActivity() {
                 password = textPassword.text.toString()
                 if (validarPassword(password) == true) {
                     Toast.makeText(this, "Contraseña valida", Toast.LENGTH_LONG).show()
-                    val url="http://192.168.1.116:80/PsicoAid/ingreso.php?nombre=${nombre}&apellidos=${apellidos}&edad=${edad}&sexo=${sexo}"
+                    val url="http://192.168.1.130:80/PsicoAid/ingreso.php?nombre=${nombre}&apellidos=${apellidos}&edad=${edad}&sexo=${sexo}&especialidad=${especialidad}&nombreUser=${nombreUser}&telefono=${telefono}&correo=${correo}&password=${password}"
                     val servicio = Volley.newRequestQueue(this)
                     val stringRequest = StringRequest(Request.Method.GET, url,
                         Response.Listener<String> { response ->
