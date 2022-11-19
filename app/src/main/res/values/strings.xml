@@ -16,4 +16,6 @@
         <item>Psicología Educativa</item>
     </string-array>
     <string name="direccionIp">http://192.168.1.199:8080/PsicoAid/index.php</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
