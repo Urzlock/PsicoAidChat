@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                var url: String = "http://192.168.1.130:80/PsicoAid/buscar_usuario.php?userName=${textUser.text}&password=${textPassword.text}"
+                var url: String = "https://psicoaid.000webhostapp.com/buscar_usuario.php?userName=${textUser.text}&password=${textPassword.text}"
                 connectivity = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
 
 
@@ -73,8 +73,8 @@ class MainActivity : AppCompatActivity() {
                                     val jArray = JSONArray(response)
                                     for (i in 0 until jArray.length()) {
                                         var jObject = jArray.getJSONObject(i)
-                                        var ID: String = jObject.get("id").toString()
-                                        var userName:String = jObject.get("NombreUsuario").toString()
+                                        var ID: String = jObject.get("idUsuario").toString()
+                                        var userName:String = jObject.get("usuario").toString()
                                         //Toast.makeText(this,  jObject.get("NombreUsuario").toString(),Toast.LENGTH_LONG).show()
                                         var intent = Intent(this, principalPsicologo::class.java)
                                         var bundle = Bundle()
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
 
                         }
                         servicio.add(respuesta)
-                        url="http://192.168.1.130:80/PsicoAid/buscar_paciente.php?userName=${textUser.text}&password=${textPassword.text}"
+                        url="https://psicoaid.000webhostapp.com/buscar_paciente.php?userName=${textUser.text}&password=${textPassword.text}"
                         val servicio2:RequestQueue=Volley.newRequestQueue(this)
                         val respuesta2 =StringRequest(
                             Request.Method.GET, url,
@@ -105,8 +105,8 @@ class MainActivity : AppCompatActivity() {
                                     val jArray = JSONArray(response)
                                     for (i in 0 until jArray.length()) {
                                         var jObject2 = jArray.getJSONObject(i)
-                                        var ID2: String = jObject2.get("id").toString()
-                                        var userName:String = jObject2.get("NombreUsuario").toString()
+                                        var ID2: String = jObject2.get("idUsuario").toString()
+                                        var userName:String = jObject2.get("Usuario").toString()
                                         //Toast.makeText(this,  jObject.get("NombreUsuario").toString(),Toast.LENGTH_LONG).show()
                                         var intent2 = Intent(this, principalPaciente::class.java)
                                         var bundle2 = Bundle()
