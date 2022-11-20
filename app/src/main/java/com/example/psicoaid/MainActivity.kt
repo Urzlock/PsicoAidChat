@@ -60,8 +60,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-                var url: String =
-                    "http://192.168.1.130:80/PsicoAid/buscar_usuario.php?userName=${textUser.text}&password=${textPassword.text}"
+                var url: String = "http://192.168.1.130:80/PsicoAid/buscar_usuario.php?userName=${textUser.text}&password=${textPassword.text}"
                 connectivity = context.getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
 
 
@@ -92,12 +91,44 @@ class MainActivity : AppCompatActivity() {
                                     e.printStackTrace()
                                 }
                             }) {
-                            Toast.makeText(
-                                applicationContext,
-                                "Error comunicación", Toast.LENGTH_SHORT
-                            ).show()
+
+
                         }
                         servicio.add(respuesta)
+                        url="http://192.168.1.130:80/PsicoAid/buscar_paciente.php?userName=${textUser.text}&password=${textPassword.text}"
+                        val servicio2:RequestQueue=Volley.newRequestQueue(this)
+                        val respuesta2 =StringRequest(
+                            Request.Method.GET, url,
+                            { response ->
+
+                                try {
+                                    val jArray = JSONArray(response)
+                                    for (i in 0 until jArray.length()) {
+                                        var jObject2 = jArray.getJSONObject(i)
+                                        var ID2: String = jObject2.get("id").toString()
+                                        var userName:String = jObject2.get("NombreUsuario").toString()
+                                        //Toast.makeText(this,  jObject.get("NombreUsuario").toString(),Toast.LENGTH_LONG).show()
+                                        var intent2 = Intent(this, principalPaciente::class.java)
+                                        var bundle2 = Bundle()
+                                        bundle2.putString("idUser", ID2)
+                                        bundle2.putString("userName",userName)
+                                        //Toast.makeText(this,bundle.toString(),Toast.LENGTH_LONG).show()
+                                        intent2.putExtras(bundle2)
+                                        startActivity(intent2)
+
+
+                                    }
+
+                                } catch (e: JSONException) {
+                                    e.printStackTrace()
+                                }
+                            }) {
+
+
+                        }
+                    servicio2.add(respuesta2)
+                   //Toast.makeText(this,"Usuario o Contraseña incorrectos",Toast.LENGTH_LONG).show()
+
 
 
 
