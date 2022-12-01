@@ -8,6 +8,7 @@ import android.net.NetworkInfo
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
@@ -33,27 +34,24 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val button:Button= findViewById(R.id.button)
+        val txtRegistrarPaciente: TextView= findViewById(R.id.txtRegistro_Paciente)
+        val txtRegistrarPsicologo: TextView= findViewById(R.id.txtRegistro_Psicologo)
         val textUser:EditText= findViewById(R.id.txtLoginUser)
         val textPassword:EditText=findViewById(R.id.txtLoginPassword)
-        val btnPS :Button =findViewById(R.id.btnPS)
         val btnCap:Button =findViewById(R.id.btnCap)
-        val btnRegistrarPsic : Button= findViewById(R.id.btnRegistroPsic)
         val btnLogin:Button = findViewById(R.id.btnLogin)
         var user :String =textUser.text.toString()
         var password:String = textPassword.text.toString()
         val queue= Volley.newRequestQueue(this)
-        button.setOnClickListener {
-            Toast.makeText(this,"${textUser.text}  ${textPassword.text}",Toast.LENGTH_LONG).show()
-        }
-        btnRegistrarPsic.setOnClickListener {
+
+        txtRegistrarPsicologo.setOnClickListener {
             startActivity(Intent(this,registroPsicologo::class.java))
         }
         btnCap.setOnClickListener {
             startActivity(Intent(this,envioCertificado::class.java))
         }
-        btnPS.setOnClickListener {
-            startActivity(Intent(this,principalPsicologo::class.java))
+        txtRegistrarPaciente.setOnClickListener {
+            startActivity(Intent(this,registroPaciente::class.java))
         }
 
         btnLogin.setOnClickListener {
@@ -74,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                                     for (i in 0 until jArray.length()) {
                                         var jObject = jArray.getJSONObject(i)
                                         var ID: String = jObject.get("idUsuario").toString()
-                                        var userName:String = jObject.get("usuario").toString()
+                                        var userName:String = jObject.get("Usuario").toString()
                                         //Toast.makeText(this,  jObject.get("NombreUsuario").toString(),Toast.LENGTH_LONG).show()
                                         var intent = Intent(this, principalPsicologo::class.java)
                                         var bundle = Bundle()
@@ -89,6 +87,7 @@ class MainActivity : AppCompatActivity() {
 
                                 } catch (e: JSONException) {
                                     e.printStackTrace()
+                                    Toast.makeText(this,"Usuario o Contraseña incorrectos",Toast.LENGTH_LONG).show()
                                 }
                             }) {
 
@@ -121,13 +120,13 @@ class MainActivity : AppCompatActivity() {
 
                                 } catch (e: JSONException) {
                                     e.printStackTrace()
+                                   // Toast.makeText(this,"Usuario o Contraseña incorrectos",Toast.LENGTH_LONG).show()
                                 }
                             }) {
-
-
+                            Toast.makeText(this,"Usuario o Contraseña incorrectos",Toast.LENGTH_LONG).show()
                         }
                     servicio2.add(respuesta2)
-                   //Toast.makeText(this,"Usuario o Contraseña incorrectos",Toast.LENGTH_LONG).show()
+                   //
 
 
 

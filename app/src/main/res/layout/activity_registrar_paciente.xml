@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registroPsicologo">
+    tools:context=".registroPaciente">
 
     <!--En el siguiente codigo esta la plantilla
     base para poder hacer todos los campos de
@@ -16,7 +16,7 @@
    -->
 
     <EditText
-        android:id="@+id/textNombre"
+        android:id="@+id/textNombrePaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +37,7 @@
 
     <EditText
 
-        android:id="@+id/textApellidos"
+        android:id="@+id/textApellidosPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,12 +53,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNombre"
+        app:layout_constraintTop_toBottomOf="@+id/textNombrePaciente"
         app:layout_constraintVertical_bias="0.063" />
 
     <EditText
 
-        android:id="@+id/textEdad"
+        android:id="@+id/textEdadPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,13 +75,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/textApellidosPaciente"
         app:layout_constraintVertical_bias="0.069" />
 
 
     <Spinner
 
-        android:id="@+id/textSexo"
+        android:id="@+id/textSexoPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="30sp"
@@ -97,34 +97,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.586"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEdad"
+        app:layout_constraintTop_toBottomOf="@+id/textEdadPaciente"
         app:layout_constraintVertical_bias="0.065" />
 
-    <Spinner
-        android:id="@+id/textEspecialidad"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:autofillHints="Especialidades"
-        android:layout_height="30sp"
-        android:layout_marginHorizontal="75dp"
-        android:background="@drawable/et_style"
-        android:ems="10"
 
-        android:inputType="textPersonName"
-        android:paddingLeft="25sp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:textColor="@color/color2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.586"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textSexo"
-        app:layout_constraintVertical_bias="0.065" />
 
     <EditText
 
-        android:id="@+id/textNombreUser"
+        android:id="@+id/textNombreUserPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -140,12 +120,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textEspecialidad"
+        app:layout_constraintTop_toBottomOf="@+id/textSexoPaciente"
         app:layout_constraintVertical_bias="0.081" />
 
     <EditText
 
-        android:id="@+id/textTelefono"
+        android:id="@+id/textTelefonoPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -161,12 +141,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNombreUser"
+        app:layout_constraintTop_toBottomOf="@+id/textNombreUserPaciente"
         app:layout_constraintVertical_bias="0.086" />
 
     <EditText
 
-        android:id="@+id/textCorreo"
+        android:id="@+id/textCorreoPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -182,12 +162,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/textTelefonoPaciente"
         app:layout_constraintVertical_bias="0.101" />
 
     <EditText
 
-        android:id="@+id/textPassword"
+        android:id="@+id/textPasswordPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -203,11 +183,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textCorreo"
+        app:layout_constraintTop_toBottomOf="@+id/textCorreoPaciente"
         app:layout_constraintVertical_bias="0.119" />
 
     <Button
-        android:id="@+id/btnRegisterPsic"
+        android:id="@+id/btnRegisterPaciente"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="wrap_content"
         android:backgroundTint="@color/colorBotones"
@@ -218,7 +198,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textPasswordPaciente" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

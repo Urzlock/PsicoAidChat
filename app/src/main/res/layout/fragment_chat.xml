@@ -3,13 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color2"
     tools:context=".Chat">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    android:layout_marginTop="10dp"
+    android:textSize="35dp"
+    android:text="Conversaciones"></TextView>
+    <ListView
+        android:layout_marginTop="75dp"
+        android:id="@+id/lvChats"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent" >
+
+
+    </ListView>
+
 
 </FrameLayout>

@@ -12,15 +12,9 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import com.android.volley.Request
-import com.android.volley.RequestQueue
 import com.android.volley.Response
-import com.android.volley.VolleyError
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-
-
-import org.json.JSONException
-import org.json.JSONObject
 
 class registroPsicologo : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -40,7 +34,6 @@ class registroPsicologo : AppCompatActivity() {
             android.R.layout.simple_spinner_item
         )
             .also { arrayAdapter -> arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item) }
-        val textView= findViewById<TextView>(R.id.textView)
         val textNombre: EditText = findViewById(R.id.textNombre)
         val textApellidos: EditText = findViewById(R.id.textApellidos)
         val textEdad: EditText = findViewById(R.id.textEdad)
@@ -86,7 +79,7 @@ class registroPsicologo : AppCompatActivity() {
                             // Display the first 500 characters of the response string.
 
                         },
-                        Response.ErrorListener { textView.text = "That didn't work!" })
+                        Response.ErrorListener {  })
                     servicio.add(stringRequest)
 
                 }

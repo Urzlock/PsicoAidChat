@@ -1,5 +1,6 @@
 package com.example.psicoaid
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -37,6 +38,7 @@ class principalPaciente : AppCompatActivity() {
 
     private fun replaceFragment(fragment: Fragment){
         val bundle1 = Bundle()
+
         bundle1.putString("idUser",id)
         bundle1.putString("userName",userName)
         fragment.arguments= bundle1
